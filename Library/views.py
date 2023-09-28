@@ -8,7 +8,7 @@ from .permissions import *
 class CategoryApiView(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
 
 class CategoryCreateView(generics.CreateAPIView):
     queryset = Category.objects.all()
