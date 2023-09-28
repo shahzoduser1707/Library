@@ -3,7 +3,7 @@ from .models import Category, Book, Author, Genre
 
 
 class CategoryTranslation(TranslationOptions):
-    fields = ('category_name')
+    fields = ('category_name',)
 
 class BookTranslation(TranslationOptions):
     fields = ('book_bio', 'category', 'genre')
@@ -12,7 +12,7 @@ class AuthorTranslation(TranslationOptions):
     fields = ('bio', 'category', 'genre')
 
 class GenreTranslation(TranslationOptions):
-    fields = ('genre_name')
+    fields = ('genre_name',)
 
 
 translator.register(Category, CategoryTranslation)
