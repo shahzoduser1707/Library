@@ -13,7 +13,7 @@ class CategoryApiView(generics.ListAPIView):
 class CategoryCreateView(generics.CreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = (IsAuthenticated, WriterPermissionClass, AdminPermissionClass)
+    permission_classes = (IsAuthenticated, AdminWriterPermissionClass)
 
 class CategoryUpdateView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
@@ -30,7 +30,7 @@ class AuthorApiView(generics.ListAPIView):
 class AuthorCreateApi(generics.CreateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-    permission_classes = (IsAuthenticated, WriterPermissionClass, AdminPermissionClass)
+    permission_classes = (IsAuthenticated, AdminWriterPermissionClass)
 
 class AuthorUpdateApi(generics.RetrieveUpdateDestroyAPIView):
     queryset = Author.objects.all()
@@ -48,7 +48,7 @@ class GenreApiView(generics.ListAPIView):
 class GenreCreateApi(generics.CreateAPIView):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    permission_classes = (IsAuthenticated, WriterPermissionClass, AdminPermissionClass)
+    permission_classes = (IsAuthenticated, AdminWriterPermissionClass)
 
 class GenreUpdateApi(generics.RetrieveUpdateDestroyAPIView):
     queryset = Genre.objects.all()
@@ -64,7 +64,7 @@ class BookApiView(generics.ListAPIView):
 class BookCreateApi(generics.CreateAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    permission_classes = (IsAuthenticated, WriterPermissionClass, AdminPermissionClass)
+    permission_classes = (IsAuthenticated, AdminWriterPermissionClass)
 
 class BookUpdateApi(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
